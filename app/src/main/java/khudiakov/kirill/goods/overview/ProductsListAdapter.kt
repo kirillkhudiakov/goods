@@ -10,6 +10,7 @@ import khudiakov.kirill.goods.databinding.ListItemBinding
 
 /**
  * Recycler view adapter for products.
+ * @param clickListener Click listener for each item in recycler view.
  */
 class ProductsListAdapter(private val clickListener: OnClickListener) :
     ListAdapter<Product, ProductsListAdapter.ProductViewHolder>(ProductDiffCallback) {
@@ -24,6 +25,7 @@ class ProductsListAdapter(private val clickListener: OnClickListener) :
 
     /**
      * View holder for product item.
+     * @param binding List item layout.
      */
     class ProductViewHolder private constructor(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
