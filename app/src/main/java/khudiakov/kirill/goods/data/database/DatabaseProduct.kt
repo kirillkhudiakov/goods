@@ -5,10 +5,10 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 /**
- * Represents a good stored in the database.
+ * Represents a product stored in the database.
  */
 @Entity
-data class DatabaseGood(
+data class DatabaseProduct(
     @PrimaryKey var id: Long,
     var name: String,
     var price: Double,
