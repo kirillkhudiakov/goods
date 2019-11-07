@@ -25,6 +25,7 @@ class ProductsListAdapter(private val clickListener: OnClickListener) :
         fun bind(product: Product, clickListener: OnClickListener) {
             binding.product = product
             binding.clickListener = clickListener
+            binding.executePendingBindings()
         }
 
         companion object {
