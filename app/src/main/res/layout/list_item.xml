@@ -8,11 +8,16 @@
         <variable
             name="product"
             type="khudiakov.kirill.goods.data.Product" />
+
+        <variable
+            name="clickListener"
+            type="khudiakov.kirill.goods.overview.ProductsListAdapter.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/list_item_height"
+        android:onClick="@{() -> clickListener.onClick(product)}"
         android:paddingStart="@dimen/margin_medium"
         android:paddingTop="@dimen/margin_small"
         android:paddingEnd="@dimen/margin_medium"
