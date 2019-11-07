@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView
 import khudiakov.kirill.goods.data.Product
 import khudiakov.kirill.goods.databinding.ListItemBinding
 
+/**
+ * Recycler view adapter for products.
+ */
 class ProductsListAdapter(private val clickListener: OnClickListener) :
     ListAdapter<Product, ProductsListAdapter.ProductViewHolder>(ProductDiffCallback) {
 
@@ -19,9 +22,17 @@ class ProductsListAdapter(private val clickListener: OnClickListener) :
         holder.bind(getItem(position), clickListener)
     }
 
+    /**
+     * View holder for product item.
+     */
     class ProductViewHolder private constructor(private val binding: ListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        /**
+         * Bind specified product to layout.
+         * @param product Product to bind.
+         * @param clickListener Click listener of corresponding item.
+         */
         fun bind(product: Product, clickListener: OnClickListener) {
             binding.product = product
             binding.clickListener = clickListener
@@ -29,6 +40,11 @@ class ProductsListAdapter(private val clickListener: OnClickListener) :
         }
 
         companion object {
+            /**
+             * Create new view holder for item.
+             * @param parent View group to which new view holder should be attached.
+             * @return New view holder.
+             */
             fun from(parent: ViewGroup): ProductViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = ListItemBinding.inflate(inflater, parent, false)
@@ -37,10 +53,16 @@ class ProductsListAdapter(private val clickListener: OnClickListener) :
         }
     }
 
+    /**
+     * Click listener for recycler view items.
+     */
     class OnClickListener(private val clickListener: (product: Product) -> Unit) {
         fun onClick(product: Product) = clickListener(product)
     }
 
+    /**
+     * Product comparison object.
+     */
     companion object ProductDiffCallback : DiffUtil.ItemCallback<Product>() {
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem === newItem
