@@ -1,7 +1,9 @@
 package khudiakov.kirill.goods
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import khudiakov.kirill.goods.overview.OverviewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -10,10 +12,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        browse_button.setOnClickListener { navigateToOverview() }
-    }
-
-    private fun navigateToOverview() {
-
+        browse_button.setOnClickListener {
+            startActivity(Intent(this, OverviewActivity::class.java))
+        }
     }
 }
