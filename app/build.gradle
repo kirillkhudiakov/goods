@@ -39,7 +39,7 @@ dependencies {
     // Moshi
     def moshi_version = '1.9.1'
     implementation "com.squareup.moshi:moshi:$moshi_version"
-    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
 
     // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
