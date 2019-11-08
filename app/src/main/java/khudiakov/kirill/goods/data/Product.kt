@@ -1,11 +1,15 @@
 package khudiakov.kirill.goods.data
 
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
 /**
- * Domain class to represent a product.
+ * Represents a product received from the server.
  */
+@JsonClass(generateAdapter = true)
 data class Product(
-    var id: Long,
+    @Json(name = "gcode") var id: Long,
     var name: String,
     var price: Double,
-    var imgUrl: String
+    @Json(name = "img_preview") var imgUrl: String
 )
