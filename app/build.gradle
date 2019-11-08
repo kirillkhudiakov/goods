@@ -36,11 +36,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Room
-    def room_version = '2.2.1'
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-
     // Moshi
     def moshi_version = '1.9.1'
     implementation "com.squareup.moshi:moshi:$moshi_version"
