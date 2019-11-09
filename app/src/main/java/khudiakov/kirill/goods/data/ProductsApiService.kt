@@ -15,7 +15,7 @@ private val retrofit = Retrofit.Builder()
 
 interface ProductsApiService {
     @GET("products?cat_id=7&limit=10&offset=0&base_id=12&sort_type=0")
-    suspend fun getProducts(): Single<Response<List<Product>>>
+    fun getProducts(): Single<Response<List<Product>>>
 }
 
 object ProductsApi {
