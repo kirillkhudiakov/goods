@@ -1,5 +1,6 @@
 package khudiakov.kirill.goods.overview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import khudiakov.kirill.goods.R
 import khudiakov.kirill.goods.databinding.ActivityOverviewBinding
+import khudiakov.kirill.goods.detail.DetailActivity
 
 class OverviewActivity : AppCompatActivity() {
 
@@ -26,7 +28,9 @@ class OverviewActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        val viewAdapter = ProductsListAdapter(ProductsListAdapter.OnClickListener {})
+        val viewAdapter = ProductsListAdapter(ProductsListAdapter.OnClickListener { id ->
+            navigateToDetaiActivity(id)
+        })
         val viewManager = LinearLayoutManager(this)
 
         viewModel.products.observe(this, Observer { list ->
@@ -38,5 +42,11 @@ class OverviewActivity : AppCompatActivity() {
             adapter = viewAdapter
             addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         }
+    }
+
+    private fun navigateToDetaiActivity(productId: Long) {
+        val intent = Intent(this, DetailActivity::class.java)
+        intent.putExtra("Key", productId)
+        startActivity(intent)
     }
 }

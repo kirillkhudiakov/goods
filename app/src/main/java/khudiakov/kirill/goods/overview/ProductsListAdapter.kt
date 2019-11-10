@@ -58,8 +58,8 @@ class ProductsListAdapter(private val clickListener: OnClickListener) :
     /**
      * Click listener for recycler view items.
      */
-    class OnClickListener(private val clickListener: (product: Product) -> Unit) {
-        fun onClick(product: Product) = clickListener(product)
+    class OnClickListener(private val clickListener: (productId: Long) -> Unit) {
+        fun onClick(productId: Long) = clickListener(productId)
     }
 
     /**
