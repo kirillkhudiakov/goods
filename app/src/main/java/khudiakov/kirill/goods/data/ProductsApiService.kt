@@ -7,6 +7,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
 private const val BASE_URL = "http://vimos.ru:1455"
+private const val ENDPOINT = "products?cat_id=7&limit=10&offset=0&base_id=12&sort_type=0"
 
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create())
@@ -23,7 +24,7 @@ interface ProductsApiService {
      * Requests a list of products from the server.
      * @return RxJava Single object.
      */
-    @GET("products?cat_id=7&limit=10&offset=0&base_id=12&sort_type=0")
+    @GET(ENDPOINT)
     fun getProducts(): Single<List<Product>>
 }
 
