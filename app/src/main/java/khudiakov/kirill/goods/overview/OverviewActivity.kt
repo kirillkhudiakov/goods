@@ -29,7 +29,7 @@ class OverviewActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         val viewAdapter = ProductsListAdapter(ProductsListAdapter.OnClickListener { id ->
-            navigateToDetaiActivity(id)
+            navigateToDetailActivity(id)
         })
         val viewManager = LinearLayoutManager(this)
 
@@ -44,7 +44,7 @@ class OverviewActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToDetaiActivity(productId: Long) {
+    private fun navigateToDetailActivity(productId: Long) {
         val intent = Intent(this, DetailActivity::class.java)
         intent.putExtra("Key", productId)
         startActivity(intent)
