@@ -47,6 +47,7 @@
             android:layout_width="@dimen/small_image_size"
             android:layout_height="@dimen/small_image_size"
             android:contentDescription="@string/image_description"
+            app:imageUrl="@{product.imgUrl}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
