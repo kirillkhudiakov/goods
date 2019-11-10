@@ -1,7 +1,6 @@
 package khudiakov.kirill.goods.data
 
 import io.reactivex.Single
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -17,7 +16,7 @@ private val retrofit = Retrofit.Builder()
 
 interface ProductsApiService {
     @GET("products?cat_id=7&limit=10&offset=0&base_id=12&sort_type=0")
-    fun getProducts(): Single<Response<List<Product>>>
+    fun getProducts(): Single<List<Product>>
 }
 
 object ProductsApi {
