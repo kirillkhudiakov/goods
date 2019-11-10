@@ -11,6 +11,9 @@ const val BASE_URL = "http://vimos.ru"
 private const val PORT = "1455"
 private const val ENDPOINT = "products?cat_id=7&limit=10&offset=0&base_id=12&sort_type=0"
 
+/**
+ * Json converter with custom adapter.
+ */
 private val moshi = Moshi.Builder()
     .add(ProductAdapter())
     .build()
