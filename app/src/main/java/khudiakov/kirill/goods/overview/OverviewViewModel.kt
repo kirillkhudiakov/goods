@@ -7,7 +7,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import khudiakov.kirill.goods.data.Product
-import khudiakov.kirill.goods.data.ProductsApi
+import khudiakov.kirill.goods.data.network.ProductsApi
 
 class OverviewViewModel : ViewModel() {
 

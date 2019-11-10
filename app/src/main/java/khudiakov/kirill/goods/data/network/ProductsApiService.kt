@@ -1,7 +1,8 @@
-package khudiakov.kirill.goods.data
+package khudiakov.kirill.goods.data.network
 
 import com.squareup.moshi.Moshi
 import io.reactivex.Single
+import khudiakov.kirill.goods.data.Product
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory

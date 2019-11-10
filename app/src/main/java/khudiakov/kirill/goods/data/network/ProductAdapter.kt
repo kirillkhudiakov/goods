@@ -1,9 +1,10 @@
-package khudiakov.kirill.goods.data
+package khudiakov.kirill.goods.data.network
 
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import com.squareup.moshi.ToJson
+import khudiakov.kirill.goods.data.Product
 
 /**
  * img_preview field received from json doesn't contain full url of image, only endpoint.
