@@ -18,10 +18,10 @@ class OverviewViewModel : ViewModel() {
         get() = _products
 
     init {
-        getProducts()
+        updateProducts()
     }
 
-    private fun getProducts() {
+    private fun updateProducts() {
         val single = ProductsApi.retrofitService.getProducts()
         disposableObserver?.dispose()
 
