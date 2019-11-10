@@ -14,11 +14,22 @@ private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
     .build()
 
+/**
+ * Interface that contains methods for requesting data the server.
+ */
 interface ProductsApiService {
+
+    /**
+     * Requests a list of products from the server.
+     * @return RxJava Single object.
+     */
     @GET("products?cat_id=7&limit=10&offset=0&base_id=12&sort_type=0")
     fun getProducts(): Single<List<Product>>
 }
 
+/**
+ * Singleton that contains a reference to retrofit service.
+ */
 object ProductsApi {
     val retrofitService : ProductsApiService by lazy {
         retrofit.create(ProductsApiService::class.java)
