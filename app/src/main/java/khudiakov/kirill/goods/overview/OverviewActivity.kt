@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import khudiakov.kirill.goods.R
 import khudiakov.kirill.goods.databinding.ActivityOverviewBinding
@@ -35,6 +36,7 @@ class OverviewActivity : AppCompatActivity() {
         binding.list.apply {
             layoutManager = viewManager
             adapter = viewAdapter
+            addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
         }
     }
 }
