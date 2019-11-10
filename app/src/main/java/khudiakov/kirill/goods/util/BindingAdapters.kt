@@ -9,6 +9,7 @@ fun bindImage(imageView: ImageView, imageUrl: String?) {
     imageUrl?.let {
         Glide.with(imageView.context)
             .load(it)
+            .circleCrop()
             .into(imageView)
     }
 }
