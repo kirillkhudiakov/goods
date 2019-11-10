@@ -3,7 +3,9 @@ package khudiakov.kirill.goods.overview
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import khudiakov.kirill.goods.data.Product
 import khudiakov.kirill.goods.data.ProductsApi
 
@@ -21,9 +23,12 @@ class OverviewViewModel : ViewModel() {
 
     private fun getProducts() {
         val single = ProductsApi.retrofitService.getProducts()
-        disposableObserver = single.subscribe({ response ->
-            _products.value = response.body()
-        }, {})
+        disposableObserver = single
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({ list ->
+                _products.value = list
+            }, {})
     }
 
     override fun onCleared() {
