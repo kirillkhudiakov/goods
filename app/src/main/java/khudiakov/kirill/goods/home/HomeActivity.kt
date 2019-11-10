@@ -1,16 +1,17 @@
-package khudiakov.kirill.goods
+package khudiakov.kirill.goods.home
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import khudiakov.kirill.goods.R
 import khudiakov.kirill.goods.overview.OverviewActivity
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_home.*
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
         browse_button.setOnClickListener {
             startActivity(Intent(this, OverviewActivity::class.java))
