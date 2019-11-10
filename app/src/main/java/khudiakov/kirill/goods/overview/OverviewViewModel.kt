@@ -14,6 +14,10 @@ class OverviewViewModel : ViewModel() {
     private var disposableObserver: Disposable? = null
 
     private val _products = MutableLiveData<List<Product>>()
+
+    /**
+     * List of products received from remote source.
+      */
     val products: LiveData<List<Product>>
         get() = _products
 
@@ -21,8 +25,13 @@ class OverviewViewModel : ViewModel() {
         updateProducts()
     }
 
+    /**
+     * Update current product list via retrofit service.
+     */
     private fun updateProducts() {
         val single = ProductsApi.retrofitService.getProducts()
+
+        // Dispose previous disposable (if exists) to avoid memory leak.
         disposableObserver?.dispose()
 
         disposableObserver = single
