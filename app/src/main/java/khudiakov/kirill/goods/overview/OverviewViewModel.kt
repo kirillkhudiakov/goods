@@ -23,6 +23,8 @@ class OverviewViewModel : ViewModel() {
 
     private fun getProducts() {
         val single = ProductsApi.retrofitService.getProducts()
+        disposableObserver?.dispose()
+
         disposableObserver = single
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
