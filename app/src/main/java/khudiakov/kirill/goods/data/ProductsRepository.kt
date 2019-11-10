@@ -7,6 +7,9 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import khudiakov.kirill.goods.data.network.ProductsApi
 
+/**
+ * Repository class that encapsulates receiving product list from the server.
+ */
 class ProductsRepository {
 
     private var disposableObserver: Disposable? = null
