@@ -34,6 +34,7 @@
             android:layout_marginTop="@dimen/margin_large"
             android:layout_marginEnd="@dimen/margin_medium"
             android:text="@{product.name}"
+            android:textSize="@dimen/text_size_large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_image"
@@ -46,7 +47,7 @@
             android:layout_marginStart="@dimen/margin_medium"
             android:fontFamily="@font/roboto"
             android:text="@{@string/id_formatted(product.id)}"
-            app:layout_constraintBottom_toBottomOf="@+id/product_price"
+            app:layout_constraintBaseline_toBaselineOf="@+id/product_price"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="@string/id_example" />
 
@@ -56,7 +57,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_extra_large"
             android:layout_marginEnd="@dimen/margin_medium"
+            android:fontFamily="@font/roboto_bold"
             android:text="@{@string/price_formatted(product.price)}"
+            android:textSize="@dimen/text_size_extra_large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_name"
             tools:text="@string/price_example" />
