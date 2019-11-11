@@ -23,7 +23,11 @@ class OverviewActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_overview)
-        binding.lifecycleOwner = this
+
+        ProductsRepository.apiStatus.observe(this, Observer { status ->
+            binding.status = status
+        })
+        ProductsRepository.updateProducts()
 
         setupRecyclerView()
     }
