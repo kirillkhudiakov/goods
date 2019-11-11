@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import khudiakov.kirill.goods.R
+import khudiakov.kirill.goods.data.PRODUCT_ID_KEY
 import khudiakov.kirill.goods.data.ProductsRepository
 import khudiakov.kirill.goods.databinding.ActivityDetailBinding
 
@@ -18,7 +19,7 @@ class DetailActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
 
-        intent.extras?.getLong("Key")?.let { id ->
+        intent.extras?.getLong(PRODUCT_ID_KEY)?.let { id ->
             binding.product = ProductsRepository[id]
         }
     }

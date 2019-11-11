@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import khudiakov.kirill.goods.R
 import khudiakov.kirill.goods.adapters.ProductsListAdapter
+import khudiakov.kirill.goods.data.PRODUCT_ID_KEY
 import khudiakov.kirill.goods.data.ProductsRepository
 import khudiakov.kirill.goods.databinding.ActivityOverviewBinding
 
@@ -47,7 +48,7 @@ class OverviewActivity : AppCompatActivity() {
 
     private fun navigateToDetailActivity(productId: Long) {
         val intent = Intent(this, DetailActivity::class.java)
-        intent.putExtra("Key", productId)
+        intent.putExtra(PRODUCT_ID_KEY, productId)
         startActivity(intent)
     }
 

@@ -7,6 +7,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import khudiakov.kirill.goods.data.network.ProductsApi
 
+const val PRODUCT_ID_KEY = "product_id_key"
+
 /**
  * Repository class that encapsulates receiving product list from the server.
  */
