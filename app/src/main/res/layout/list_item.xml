@@ -11,7 +11,7 @@
 
         <variable
             name="clickListener"
-            type="khudiakov.kirill.goods.overview.ProductsListAdapter.OnClickListener" />
+            type="khudiakov.kirill.goods.adapters.ProductsListAdapter.OnClickListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,8 +24,8 @@
             android:id="@+id/list_item_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@{product.name}"
             android:layout_marginTop="@dimen/margin_medium"
+            android:text="@{product.name}"
             app:layout_constraintEnd_toStartOf="@+id/list_item_price"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

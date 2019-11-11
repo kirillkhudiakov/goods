@@ -1,4 +1,4 @@
-package khudiakov.kirill.goods.util
+package khudiakov.kirill.goods.adapters
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

@@ -1,10 +1,9 @@
-package khudiakov.kirill.goods.home
+package khudiakov.kirill.goods.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import khudiakov.kirill.goods.R
-import khudiakov.kirill.goods.overview.OverviewActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity() {

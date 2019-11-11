@@ -1,4 +1,4 @@
-package khudiakov.kirill.goods.detail
+package khudiakov.kirill.goods.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package khudiakov.kirill.goods.overview
+package khudiakov.kirill.goods.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +11,6 @@ import khudiakov.kirill.goods.R
 import khudiakov.kirill.goods.adapters.ProductsListAdapter
 import khudiakov.kirill.goods.data.ProductsRepository
 import khudiakov.kirill.goods.databinding.ActivityOverviewBinding
-import khudiakov.kirill.goods.detail.DetailActivity
 
 class OverviewActivity : AppCompatActivity() {
 

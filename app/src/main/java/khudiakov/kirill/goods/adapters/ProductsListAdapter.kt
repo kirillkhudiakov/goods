@@ -1,4 +1,4 @@
-package khudiakov.kirill.goods.overview
+package khudiakov.kirill.goods.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,10 +13,14 @@ import khudiakov.kirill.goods.databinding.ListItemBinding
  * @param clickListener Click listener for each item in recycler view.
  */
 class ProductsListAdapter(private val clickListener: OnClickListener) :
-    ListAdapter<Product, ProductsListAdapter.ProductViewHolder>(ProductDiffCallback) {
+    ListAdapter<Product, ProductsListAdapter.ProductViewHolder>(
+        ProductDiffCallback
+    ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        return ProductViewHolder.from(parent)
+        return ProductViewHolder.from(
+            parent
+        )
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
