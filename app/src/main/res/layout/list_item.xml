@@ -36,7 +36,7 @@
             android:id="@+id/list_item_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(product.id)}"
+            android:text="@{@string/id_formatted(product.id)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/list_item_name"
             tools:text="@string/id_example" />
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:text="@{String.valueOf(product.price)}"
+            android:text="@{@string/price_formatted(product.price)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/list_item_icon"
             app:layout_constraintTop_toTopOf="parent"
