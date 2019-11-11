@@ -2,6 +2,7 @@
     <string name="app_name">Goods</string>
     <string name="image_description">Product image</string>
     <string name="loading_image_description">Loading image</string>
+    <string name="browse_button_label">Перейти к товарам</string>
     <string name="price_formatted">%.0f₽</string>
     <string name="id_formatted">Артикул: %d</string>
     <string name="name_example">Брусок хвойный естественной влажности сорт1&#8211;3 22&#8211;25*50мм</string>
