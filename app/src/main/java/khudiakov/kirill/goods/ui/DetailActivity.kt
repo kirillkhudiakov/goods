@@ -2,6 +2,7 @@ package khudiakov.kirill.goods.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import khudiakov.kirill.goods.R
 import khudiakov.kirill.goods.data.ProductsRepository
@@ -13,11 +14,18 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
 
         val id = intent.extras?.getLong("Key")
         id?.let {
             binding.product = ProductsRepository[id]
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        onBackPressed()
+        return true
     }
 }
