@@ -18,8 +18,7 @@ class DetailActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
 
-        val id = intent.extras?.getLong("Key")
-        id?.let {
+        intent.extras?.getLong("Key")?.let { id ->
             binding.product = ProductsRepository[id]
         }
     }
