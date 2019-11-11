@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 fun bindImage(imageView: ImageView, imageUrl: String?) {
     imageUrl?.let {
         Glide.with(imageView.context)
-            .load(it)
+            .load(imageUrl)
             .circleCrop()
             .into(imageView)
     }
